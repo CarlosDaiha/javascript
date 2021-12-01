@@ -5,3 +5,5 @@ if (confirm("Press a button!")) {
 } else {
   txt = "You pressed Cancel!";
 }
+
+console.log(txt);
