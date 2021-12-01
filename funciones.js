@@ -41,3 +41,38 @@ function repartirHospital(presupuesto) {
   traumatologia = presupuesto*0.21;
   return ["Pediatría: "+pediatria, "Urgencia: "+urgencia,"Traumatología: "+traumatologia];
 }
+
+function getExtra(dineroPorHora, horasTrabajadas) {
+  if (40 < horasTrabajadas) {
+    let horasExtra = horasTrabajadas - 40;
+    if (horasExtra <= 8) return horasExtra*dineroPorHora*2;
+    else return (dineroPorHora*(horasExtra - 8)*3+(dineroPorHora*16));
+  } else return 0;
+}
+
+function esNavidad() {
+  var input = prompt("Introduce una fecha con formato aaaa-mm-dd");
+  let date = new Date(input).toString();
+  let array = date.split(' ');
+  if (array[1] == "Dec" && array[2] == 25) return "¡Es Navidad!";
+  else return "No es navidad aún...";
+}
+
+let personas = [{"Nombre": "Pepito", "Sexo": "M"},
+{"Nombre": "Fulanito", "Sexo": "M"},
+{"Nombre": "Menganito", "Sexo": "M"},
+{"Nombre": "Cristina", "Sexo": "F"},
+{"Nombre": "Marta", "Sexo": "F"},
+{"Nombre": "Sara", "Sexo": "F"},
+{"Nombre": "Soraya", "Sexo": "F"},
+{"Nombre": "Carlos", "Sexo": "M"},
+{"Nombre": "Almudena", "Sexo": "F"}];
+function porcentajes(alumnos) {
+  let hombres = 0, mujeres = 0;
+  alumnos.forEach(alumno => {
+    if (alumno.Sexo === "M") hombres++;
+    else mujeres++;
+  });
+  return [{"Hombres":(hombres/alumnos.length*100).toFixed(2)+"%", 
+  "Mujeres":(mujeres/alumnos.length*100).toFixed(2)+"%"}];
+}
