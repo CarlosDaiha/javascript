@@ -3,11 +3,11 @@ function square(number) {
 }
 
 function operaciones(number1, number2) {
-  console.log(number1-number2);
-  console.log(number1+number2);
-  console.log(number1*number2);
-  console.log(number1/number2);
-  return;
+  const sub = number1-number2;
+  const sum = number1+number2;
+  const mul = number1*number2;
+  const div = number1/number2;
+  return ["Resta: "+sub, "Suma: "+sum, "Multiplicación: "+mul, "División: "+div];
 }
 
 function areaTriangulo(base, altura) {
@@ -21,8 +21,8 @@ function perimetroRectangulo(longitud, ancho) {
 let empleados = [{"Nombre": "Pepito", "Sueldo": 1666},
 {"Nombre": "Fulanito", "Sueldo": 1500},
 {"Nombre": "Menganito", "Sueldo": 1800},
-{"Nombre": "Cristiano", "Sueldo": 5000},
-{"Nombre": "Messi", "Sueldo": 6776}];
+{"Nombre": "Messi", "Sueldo": 6776},
+{"Nombre": "Cristiano", "Sueldo": 5000}];
 function calcularSueldo(array) {
   let empleado, sueldo = 0;
   for (let i = 0; i < array.length; i++) {
