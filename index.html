@@ -7,21 +7,100 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
-    <h1>Testing</h1>
-    
+    <h1>Ejercicios</h1>
+
     <p id="demo"></p>
 
+    <p>Ejercicio 2: Calcular el área de un triángulo.
+        <form>
+            <input type="number" name="base" id="base" placeholder="Introduzca la base">
+            <input type="number" name="altura" id="altura" placeholder="Introduzca la altura">
+            <button type="button" onclick="areaTriangulo()">Calcular</button>
+        </form>
+    </p>
+    <p id="ej2"></p>
+    <br>
+
+    <p>Ejercicio 3: Calcular el perímetro de un rectángulo.
+        <form>
+            <input type="number" name="longitud" id="longitud" placeholder="Introduzca la longitud">
+            <input type="number" name="ancho" id="ancho" placeholder="Introduzca la ancho">
+            <button type="button" onclick="perimetroRectangulo()">Calcular</button>
+        </form>
+    </p>
+    <p id="ej3"></p>
+    <br>
+
+    <p>Ejercicio 4: Dado un conjunto de datos de empleados, devolver aquel empleado con mayor sueldo.
+        <form>
+            <p>Primer empleado:
+                <input type="text" name="nombre" id="nombre1" placeholder="Introduzca el nombre">
+                <input type="number" name="sueldo" id="sueldo1" placeholder="Introduzca su sueldo">
+            </p>
+            <p>Segundo empleado:
+                <input type="text" name="nombre" id="nombre2" placeholder="Introduzca el nombre">
+                <input type="number" name="sueldo" id="sueldo2" placeholder="Introduzca su sueldo">
+            </p>
+            <p>Tercer empleado:
+                <input type="text" name="nombre" id="nombre3" placeholder="Introduzca el nombre">
+                <input type="number" name="sueldo" id="sueldo3" placeholder="Introduzca su sueldo">
+            </p>
+            <p>Cuarto empleado:
+                <input type="text" name="nombre" id="nombre4" placeholder="Introduzca el nombre">
+                <input type="number" name="sueldo" id="sueldo4" placeholder="Introduzca su sueldo">
+            </p>
+            <p>Quinto empleado:
+                <input type="text" name="nombre" id="nombre5" placeholder="Introduzca el nombre">
+                <input type="number" name="sueldo" id="sueldo5" placeholder="Introduzca su sueldo">
+            </p>
+            <button type="button" onclick="calcularSueldo()">Descubrir</button>
+        </form>
+    </p>
+    <p id="ej4"></p>
+    <br>
+
+    <p>Ejercicio 5: Calcular la cantidad de dinero que recibirá el área de pediatría, urgencias y traumatología para cualquier monto presupuestal.
+        <form>
+            <input type="number" name="presupuesto" id="presupuesto" placeholder="Introduzca presupuesto">
+            <button type="button" onclick="repartirHospital()">Calcular presupuestos</button>
+        </form>
+    </p>
+    <p id="ej5"></p>
+    <br>
+
+    <p>Ejercicio 6: Determinar la cantidad de dinero que recibirá un trabajador por concepto de horas extra trabajadas.</p>
     <p id="horasExtra">El dinero que te corresponde por las horas extra trabajadas son...</p>
     <form action="">
         <input type="number" name="dineroPorHora" id="dineroPorHora" placeholder="Introduzca €/h">
         <input type="number" name="horasTrabajadas" id="horasTrabajadas" placeholder="Total horas trabajadas">
         <button type="button" onclick="getExtra()">Descubrir</button>
     </form>
+    <br>
 
+    <p>Ejercicio 7.1: Pasar una fecha y verificar si dicha ficha corresponde a Navidad.</p>
     <p id="navidad">¿Será Navidad?  
         <button onclick="esNavidad()">¡Clica aquí!</button>
     </p>
+    <br>
 
+    <p>Ejercicio 7.2: Pasar una fecha y verificar si dicha ficha corresponde a Navidad.
+        <form>
+            <input type="date" name="fecha" id="fecha">
+            <button type="button" onclick="isXmas()">Descubrir</button>
+        </form>
+    </p>
+    <p id="ej7"></p>
+    <br>
+
+    <p>Ejercicio 8: Calcular el porcentaje de hombres y mujeres que hay en un grupo de estudiantes.
+        <form>
+            <input type="text" name="dataset" id="dataset" placeholder="Conjunto de datos">
+            <button type="button" onclick="porcentajes()">Calcular</button>
+        </form>
+    </p>
+    <p id="ej8"></p>
+    <br>
+    
     <button id="btnDias">Mostrar días laborables</button>
     <div id="list"></div>
     
