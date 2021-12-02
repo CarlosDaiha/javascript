@@ -5,18 +5,30 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Homepage</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script src="switch.js"></script>
-    <script src="funciones.js"></script>
 </head>
 <body>
     <h1>Testing</h1>
     
     <p id="demo"></p>
+
+    <p id="horasExtra">El dinero que te corresponde por las horas extra trabajadas son...</p>
+    <form action="">
+        <input type="number" name="dineroPorHora" id="dineroPorHora" placeholder="Introduzca €/h">
+        <input type="number" name="horasTrabajadas" id="horasTrabajadas" placeholder="Total horas trabajadas">
+        <button type="button" onclick="getExtra()">Descubrir</button>
+    </form>
+
+    <p id="navidad">¿Será Navidad?  
+        <button onclick="esNavidad()">¡Clica aquí!</button>
+    </p>
+
+    <button id="btnDias">Mostrar días laborables</button>
+    <div id="list"></div>
     
-    <script src='herencia.js'></script>
     <script>
         let p = document.getElementById("demo");
         p.style.fontStyle = "italic";
     </script>
+    <script src="funciones.js"></script>
 </body>
 </html>

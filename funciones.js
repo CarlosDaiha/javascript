@@ -18,7 +18,7 @@ function perimetroRectangulo(longitud, ancho) {
   return (2*longitud)+(2*ancho);
 }
 
-let empleados = [{"Nombre": "Pepito", "Sueldo": 1666},
+const empleados = [{"Nombre": "Pepito", "Sueldo": 1666},
 {"Nombre": "Fulanito", "Sueldo": 1500},
 {"Nombre": "Menganito", "Sueldo": 1800},
 {"Nombre": "Messi", "Sueldo": 6776},
@@ -42,23 +42,28 @@ function repartirHospital(presupuesto) {
   return ["Pediatría: "+pediatria, "Urgencia: "+urgencia,"Traumatología: "+traumatologia];
 }
 
-function getExtra(dineroPorHora, horasTrabajadas) {
+function getExtra() {
+  var resultado;
+  let dineroPorHora = document.getElementById("dineroPorHora").value;
+  let horasTrabajadas = document.getElementById("horasTrabajadas").value;
   if (40 < horasTrabajadas) {
     let horasExtra = horasTrabajadas - 40;
-    if (horasExtra <= 8) return horasExtra*dineroPorHora*2;
-    else return (dineroPorHora*(horasExtra - 8)*3+(dineroPorHora*16));
-  } else return 0;
+    if (horasExtra <= 8) resultado = horasExtra*dineroPorHora*2;
+    else resultado = (dineroPorHora*(horasExtra - 8)*3+(dineroPorHora*16));
+  } else resultado = 0;
+  return document.getElementById("horasExtra").innerHTML = "Te corresponde "+resultado+"€";
 }
 
 function esNavidad() {
   var input = prompt("Introduce una fecha con formato aaaa-mm-dd");
   let date = new Date(input).toString();
   let array = date.split(' ');
-  if (array[1] == "Dec" && array[2] == 25) return "¡Es Navidad!";
-  else return "No es navidad aún...";
+  if (array[1] == "Dec" && array[2] == 25) 
+    return document.getElementById("navidad").innerHTML = "¡Es Navidad!";
+  else return document.getElementById("navidad").innerHTML = "No es navidad aún...";
 }
 
-let personas = [{"Nombre": "Pepito", "Sexo": "M"},
+const personas = [{"Nombre": "Pepito", "Sexo": "M"},
 {"Nombre": "Fulanito", "Sexo": "M"},
 {"Nombre": "Menganito", "Sexo": "M"},
 {"Nombre": "Cristina", "Sexo": "F"},
@@ -76,3 +81,13 @@ function porcentajes(alumnos) {
   return [{"Hombres":(hombres/alumnos.length*100).toFixed(2)+"%", 
   "Mujeres":(mujeres/alumnos.length*100).toFixed(2)+"%"}];
 }
+
+function getList() {
+  dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
+
+  for (let i = 0; i < dias.length; i++) {
+    document.getElementById("list").innerHTML += "<li>"+dias[i]+"</li>";
+  }
+}
+
+document.getElementById("btnDias").addEventListener("click", getList);
